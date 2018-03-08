@@ -1,4 +1,5 @@
- // Creates an array that lists out all of the options (Psychic-Game).
+ 
+     // Creates an array that lists out all of the options (Psychic-Game).
  var wins = 0;
  var losses = 0;
  var guessesLeft = 9;
@@ -16,7 +17,10 @@
      var userGuess = event.key;
 
      // Randomly chooses a choice from the options array. This is the Computer's guess.
-
+     if (guessesSoFar.indexOf(userGuess) < 0 && computerChoices.indexOf(userGuess) >= 0) {
+      guessesSoFar[guessesSoFar.length]=userGuess;
+      // if it is a new letter then decrease remaining guesses by 1
+  guessesLeft--;}
 
      if (userGuess == computerGuess) {
          wins++;
@@ -43,6 +47,6 @@
      var Guesseslefthtml = document.getElementById("Guessesleft")
      Guesseslefthtml.innerHTML = (guessesLeft);
 
-     var guesSeSoFarhtml = document.getElementById("guesSeSoFar")
-     guesSeSoFarhtml.innerHTML = (guessSoFar);
-     };
+     var guesSeSofarhtml = document.getElementById("guesSeSofar")
+     guesSeSofarhtml.innerHTML = (guessesSoFar);
+     };   
