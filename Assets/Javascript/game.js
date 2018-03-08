@@ -9,14 +9,14 @@
 
  var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
- // This function is run whenever the user presses a key.
+ // Whenever the user presses a key this function is run .
  document.onkeyup = function (event) {
      var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
      // Determines which key was pressed.
      var userGuess = event.key;
 
-     // Randomly chooses a choice from the options array. This is the Computer's guess.
+     // This is the Computer's guess randomly.
      if (guessesSoFar.indexOf(userGuess) < 0 && computerChoices.indexOf(userGuess) >= 0) {
       guessesSoFar[guessesSoFar.length]=userGuess;
       // if it is a new letter then decrease remaining guesses by 1
@@ -25,8 +25,8 @@
      if (userGuess == computerGuess) {
          wins++;
          alert('Yee you Won!');
-         guessesLeft = 9; //reseting the guesses back to 9 so that the user can play again
-         guessesSoFar.length = 0; //this removes everything from the guesses so far array, so that the guesses from the previous round don't show
+         guessesLeft = 9; //resets the guesses back to the beggining 9 
+         guessesSoFar.length = 0; //This removes everything that has been guessed, so that the guesses from the previous round don't show
      }
      else if (guessesLeft == 0) {
          losses++;
