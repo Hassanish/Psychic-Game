@@ -45,6 +45,4 @@
 
      var guesSeSoFarhtml = document.getElementById("guesSeSoFar")
      guesSeSoFarhtml.innerHTML = (guessSoFar);
-
-
- };
+     };
