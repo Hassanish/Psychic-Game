@@ -37,9 +37,10 @@
      else if (userGuess !== computerGuess) {
          guessesLeft--; //decrementing the guesses left
      }
+  
+// Taking the tallies and displaying them in HTML    
      var winhtml = document.getElementById("win")
      winhtml.innerHTML = (wins);
-
 
      var losshtml = document.getElementById("loss")
      losshtml.innerHTML = (losses);
